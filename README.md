@@ -1,4 +1,4 @@
-aa**This is a version of Jason Grimes Simple User which has been modified to work with Silex 2.0 rather than SIlex 1.3.. 
+**This is a version of Jason Grimes Simple User which has been modified to work with Silex 2.0 rather than SIlex 1.3.. 
 Both the source code and the unit tests have been modified and the unit tests complete successfully.**
 
 #Simple User Provider for Silex
