@@ -1,5 +1,5 @@
 {
-  "name": "davec49/silex2-simpleuser",
+  "name": "slaszu/SimpleUser-Silex2",
   "type": "library",
   "description": "A simple database-backed user provider for Silex 2.0, with associated services and controllers forked from jasongrimes/SimpleUser.",
   "keywords": ["silex", "user", "user provider", "simple user provider"],
@@ -18,7 +18,6 @@
     }
   ],
   "require": {
-    "php": ">=5.6.0",
     "silex/silex": "~2.0",
     "symfony/security": "~2.8|^3.0",
     "doctrine/dbal": "~2.4",
@@ -26,14 +25,7 @@
     "jasongrimes/paginator": "~1.0",
     "swiftmailer/swiftmailer": "~5.3"
   },
-  "require-dev": {
-    "phpunit/phpunit": "~5.4"
-  },
   "autoload": {
     "psr-4": {"SimpleUser\\": "src/SimpleUser"}
-  },
-  "autoload-dev": {
-    "psr-4": {"SimpleUser\\Tests\\": "tests/SimpleUser/Tests"}
-  }
-
+  }  
 }
