@@ -738,10 +738,12 @@ class UserManager implements UserProviderInterface
      */
     public function loginAsUser(User $user)
     {
-        if (null !== ($current_token = $this->app['security']->getToken())) {
-            $providerKey = method_exists($current_token, 'getProviderKey') ? $current_token->getProviderKey() : $current_token->getKey();
+        // fix for silex 2.0
+        if (null !== ($current_token = $this->app['security.token_storage']->getToken())) {
+            
+            $providerKey = $current_token->getSecret();
             $token = new UsernamePasswordToken($user, null, $providerKey);
-            $this->app['security']->setToken($token);
+            $this->app['security.token_storage']->setToken($token);
 
             $this->app['user'] = $user;
         }
